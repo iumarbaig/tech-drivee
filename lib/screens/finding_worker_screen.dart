@@ -14,7 +14,7 @@ class FindingWorkerScreen extends StatefulWidget {
   State<FindingWorkerScreen> createState() => _FindingWorkerScreenState();
 }
 
-class _FindingWorkerScreenState extends State<FindingWorkerScreen>
+class _FindingWorkerScreenState extends fState<FindingWorkerScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController anim;
   final brand = const Color(0xFFCCFD04);
