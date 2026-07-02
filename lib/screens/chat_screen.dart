@@ -11,13 +11,13 @@ class ChatScreen extends StatefulWidget {
   final String customerName;
 
   const ChatScreen({
-    Key? key,
+    super.key,
     required this.orderId,
     required this.workerId,
     required this.customerId,
     required this.workerName,
     required this.customerName,
-  }) : super(key: key);
+  });
 
   @override
   State<ChatScreen> createState() => _ChatScreenState();
@@ -95,7 +95,7 @@ class _ChatScreenState extends State<ChatScreen> {
     await NotificationService.sendNotification(
       recipientUid: otherUserId,
       title: "Naya Message 💬",
-      body: "$text",
+      body: text,
       data: {"orderId": widget.orderId, "type": "chat"},
     );
   }

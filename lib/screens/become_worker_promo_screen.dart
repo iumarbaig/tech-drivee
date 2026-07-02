@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tech_drive/screens_for_workers/worker_registration_screen.dart';
-import 'package:tech_drive/screens_for_workers/worker_home_screen.dart'; // ✅ Add this import
-import '../services/auth_service.dart'; // ✅ Add this import
+// ✅ Add this import
+// ✅ Add this import
 
 class BecomeWorkerPromoScreen extends StatelessWidget {
   const BecomeWorkerPromoScreen({super.key});

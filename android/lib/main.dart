@@ -12,8 +12,6 @@ import 'screens/contact_us_screen.dart';
 import 'screens/help_support_screen.dart';
 import 'screens/become_worker_promo_screen.dart';
 import 'screens_for_workers/worker_home_screen.dart';
-import 'screens/chat_screen.dart';
-import 'screens/call_screen.dart';
 // Theme
 import 'theme_controller.dart';
 

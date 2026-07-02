@@ -8,12 +8,12 @@ class CallScreen extends StatefulWidget {
   final String otherUserName;
 
   const CallScreen({
-    Key? key,
+    super.key,
     required this.channelId,
     required this.callType,
     required this.isCaller,
     required this.otherUserName,
-  }) : super(key: key);
+  });
 
   @override
   State<CallScreen> createState() => _CallScreenState();

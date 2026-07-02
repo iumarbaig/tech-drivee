@@ -338,7 +338,7 @@ class _WorkerRegistrationScreenState extends State<WorkerRegistrationScreen> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       decoration: _cardBox(),
       child: DropdownButtonFormField<String>(
-        value: value,
+        initialValue: value,
         items: items
             .map(
               (e) => DropdownMenuItem(

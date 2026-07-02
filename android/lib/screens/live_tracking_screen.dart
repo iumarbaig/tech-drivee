@@ -139,7 +139,7 @@ class _LiveTrackingScreenState extends State<LiveTrackingScreen> {
 
       final url =
           "https://router.project-osrm.org/route/v1/driving/"
-          "${_currentWorkerLng},${_currentWorkerLat};${_currentCustomerLng},${_currentCustomerLat}"
+          "$_currentWorkerLng,$_currentWorkerLat;$_currentCustomerLng,$_currentCustomerLat"
           "?overview=full&geometries=geojson";
 
       final res = await http.get(Uri.parse(url));

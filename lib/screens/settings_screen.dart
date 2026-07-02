@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 // IMPORT SCREENS
-import 'change_number_screen.dart';
 import 'date_distance_screen.dart';
 import 'night_mode_screen.dart';
 import 'navigation_settings_screen.dart';

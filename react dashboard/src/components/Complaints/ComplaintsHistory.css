@@ -1,0 +1,311 @@
+.ch-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: 0.2s ease;
+}
+
+.ch-card:hover {
+  border-color: var(--text-muted);
+  box-shadow: var(--shadow-md);
+}
+
+/* Filters bar — filters + search on one line */
+.ch-filters-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.ch-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Search */
+.ch-search {
+  position: relative;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.ch-search i {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+.ch-search input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: var(--transition);
+  box-sizing: border-box;
+}
+
+.ch-search input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* Filter Buttons */
+.ch-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ch-filter-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.ch-filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.ch-badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1px 7px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.ch-filter-btn:not(.active) .ch-badge {
+  background: var(--bg);
+  color: var(--text-muted);
+}
+
+/* Table */
+.ch-table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+}
+
+.ch-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ch-table th {
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.ch-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.ch-table tr:hover {
+  background: rgba(16, 185, 129, 0.03);
+}
+
+.ch-col-id {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.ch-col-title {
+  font-weight: 500;
+  max-width: 220px;
+}
+
+.ch-col-date {
+  color: var(--text-secondary);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+/* Category Pill */
+.ch-category-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Priority Pills — theme-aware */
+.ch-priority-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ch-priority-urgent {
+  background: var(--danger-light);
+  color: var(--danger);
+}
+
+.ch-priority-high {
+  background: rgba(234, 88, 12, 0.12);
+  color: #ea580c;
+}
+
+.ch-priority-medium {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.ch-priority-low {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+/* Status Badge */
+.ch-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ch-status-open {
+  background: var(--info-light);
+  color: var(--info);
+}
+
+.ch-status-in-progress {
+  background: var(--warning-light);
+  color: var(--warning);
+}
+
+.ch-status-resolved {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.ch-status-closed {
+  background: var(--bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+/* View Button */
+.ch-btn-view {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ch-btn-view:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Empty State */
+.ch-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.ch-empty-icon {
+  font-size: 48px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.ch-empty-state h3 {
+  margin: 0 0 8px;
+  color: var(--text-primary);
+}
+
+.ch-empty-state p {
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin: 0 0 20px;
+}
+
+.ch-btn-clear-filters {
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ch-btn-clear-filters:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ch-filters-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ch-search {
+    width: 100%;
+  }
+
+  .ch-table th,
+  .ch-table td {
+    padding: 12px;
+  }
+}

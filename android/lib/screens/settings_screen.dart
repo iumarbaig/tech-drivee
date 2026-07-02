@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 // IMPORT SCREENS
-import 'change_number_screen.dart';
 import 'date_distance_screen.dart';
 import 'night_mode_screen.dart';
 import 'navigation_settings_screen.dart';
@@ -213,7 +212,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
       child: ListTile(
         leading: leading,
         title: Text(title),
-        subtitle: subtitle != null ? Text(subtitle!) : null,
+        subtitle: subtitle != null ? Text(subtitle) : null,
         trailing: const Icon(Icons.arrow_forward_ios, size: 16),
         onTap: onTap,
       ),

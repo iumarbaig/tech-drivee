@@ -42,7 +42,7 @@ class _TrackingOrderScreenState extends State<TrackingOrderScreen> {
   bool _isUpdatingLocation = false;
 
   int step = 0;
-  String _currentStatus = "accepted";
+  final String _currentStatus = "accepted";
 
   // ================= UPDATE WORKER LOCATION TO FIRESTORE =================
   Future<void> _updateWorkerLocationToFirestore(double lat, double lng) async {

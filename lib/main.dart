@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart'; // ✅ NEW
+import 'firebase_options.dart';
 // Screens
 import 'screens/splash_screen.dart';
 import 'screens/login_screen.dart';
@@ -12,20 +13,18 @@ import 'screens/contact_us_screen.dart';
 import 'screens/help_support_screen.dart';
 import 'screens/become_worker_promo_screen.dart';
 import 'screens_for_workers/worker_home_screen.dart';
-import 'screens/chat_screen.dart';
-import 'screens/call_screen.dart';
 // Theme
 import 'theme_controller.dart';
 
 // ✅ NEW — background handler
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   FirebaseMessaging.onBackgroundMessage(_firebaseMessagingBackgroundHandler);
   await FirebaseMessaging.instance.requestPermission(
     alert: true,

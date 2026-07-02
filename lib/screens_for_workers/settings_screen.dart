@@ -63,7 +63,7 @@ class _WorkerSettingsScreenState extends State<WorkerSettingsScreen> {
                   ),
                   Switch(
                     value: nightMode,
-                    activeColor: brand,
+                    activeThumbColor: brand,
                     onChanged: (v) {
                       setState(() => nightMode = v);
                     },
